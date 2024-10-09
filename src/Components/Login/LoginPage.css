@@ -1,0 +1,31 @@
+.Background {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('../Assets/BACKGROUND.jpg'); /* Set background image */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    height: 100vh;  /* Make sure the background covers the entire viewport */
+  }
+  /* Add an overlay */
+.Background::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 19, 166, 0.396); /* Light blue overlay with transparency */
+}
+
+.login_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    z-index: 2; /* Ensure content is above the overlay */
+}
+.mb-3{
+    height: 2%;  /* Set desired height */
+    border-radius: 50%;  /* If you want to make it circular */
+
+}

@@ -1,0 +1,28 @@
+.container {
+    max-width: 1200px;
+  }
+  
+  .card {
+    border: 1px solid #ccc;
+  }
+  
+  .progress-bar {
+    background-color: #4caf50;
+  }
+  
+  .submission-log-grading {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .submission-logs, .grading {
+    border: 1px solid #ddd; /* Optional border */
+    padding: 15px; /* Optional padding */
+    border-radius: 5px; /* Optional border radius */
+    background-color: #f9f9f9; /* Optional background color */
+  }
+
+  .profile-header{
+    background-color: #ffffff7a;
+    border-radius: 30px;
+  }

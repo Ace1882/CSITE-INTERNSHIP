@@ -1,0 +1,41 @@
+body {
+  background-image: url('../../Components/Assets/BACKGROUND.jpg');
+  background-size: cover; /* Fills the entire screen */
+  background-repeat: no-repeat; /* Prevents image tiling */
+  background-position: center; 
+  background-attachment: fixed;
+  background-color: rgba(0, 19, 166, 0.396);
+}
+
+.overlay{
+    background-color: rgba(0, 0, 0, 0.5); /* Black overlay with 50% opacity */
+    position: absolute; /* Position absolute for overlay */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2; /* On top of the background */
+}
+
+h2{
+  color: rgb(249, 246, 246);
+}
+
+h4{
+  color: azure;
+}
+
+.dashboard-container {
+  min-height: 100vh; /* Ensure the container takes up at least the full height of the viewport */
+  display: flex;
+  flex-direction: column; /* Stack header, content, and footer vertically */
+}
+
+.student-list {
+  flex: 1; /* Allow this section to grow and take up available space */
+}
+
+.form-label{
+  color: white;
+}
+

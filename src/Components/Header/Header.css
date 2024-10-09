@@ -1,0 +1,22 @@
+/* src/Components/Header/Header.css */
+.navbar {
+  padding: 10px;
+}
+
+.logo {
+  width: 70px;  /* Set logo size */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.brand-name {
+  font-size: 2rem;
+  font-weight: bold;
+  color: black; /* White text for better contrast */
+}
+
+.nav-link {
+  color: black; /* Light text color */
+  margin: 0 15px; /* Add space between links */
+  transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
