@@ -1,41 +1,46 @@
 body {
   background-image: url('../../Components/Assets/BACKGROUND.jpg');
-  background-size: cover; /* Fills the entire screen */
-  background-repeat: no-repeat; /* Prevents image tiling */
-  background-position: center; 
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   background-attachment: fixed;
-  background-color: rgba(0, 19, 166, 0.396);
 }
 
-.overlay{
-    background-color: rgba(0, 0, 0, 0.5); /* Black overlay with 50% opacity */
-    position: absolute; /* Position absolute for overlay */
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 2; /* On top of the background */
+h2, h4 {
+  color: black;
 }
-
-h2{
-  color: rgb(249, 246, 246);
-}
-
-h4{
-  color: azure;
-}
-
 .dashboard-container {
-  min-height: 100vh; /* Ensure the container takes up at least the full height of the viewport */
+  position: relative; /* Important to position container relative */
+  z-index: 1; /* Content will appear above overlay */
+  min-height: 100vh;
   display: flex;
-  flex-direction: column; /* Stack header, content, and footer vertically */
+  flex-direction: column;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 19, 166, 0.396); /* Light blue overlay with transparency */
+  z-index: 0; /* Keep overlay behind content */
+  pointer-events: none; /* Ensure the overlay does not block interactions */
 }
 
 .student-list {
-  flex: 1; /* Allow this section to grow and take up available space */
+  position: relative;
+  z-index: 2; /* Bring the student list above the overlay */
+  background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent background to separate from overlay */
+  padding: 20px;
+  border-radius: 10px;
 }
 
-.form-label{
-  color: white;
+.table-container {
+  z-index: 2; /* Ensure the table is above the overlay */
+}
+
+.form-label {
+  color: rgb(0, 0, 0);
 }
 

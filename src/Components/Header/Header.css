@@ -1,22 +1,27 @@
-/* src/Components/Header/Header.css */
-.navbar {
-  padding: 10px;
-}
-
-.logo {
-  width: 70px;  /* Set logo size */
-  height: auto; /* Maintain aspect ratio */
+.navbar-expand-lg{
+  background-color: rgba(255, 255, 255, 0.638);
 }
 
 .brand-name {
   font-size: 2rem;
   font-weight: bold;
-  color: black; /* White text for better contrast */
+  color: black; /* Text color for brand name */
 }
 
+/* Styles for nav links */
 .nav-link {
-  color: black; /* Light text color */
-  margin: 0 15px; /* Add space between links */
-  transition: color 0.3s; /* Smooth transition for hover effect */
+  color: black; /* Text color */
+  margin: 0 15px; /* Space between links */
+  border-radius: 5px; /* Rounded corners */
+  transition: all 0.3s ease; /* Smooth transition for hover and active states */
+  display: inline-block; /* Ensure the link behaves like a block for padding */
 }
+
+/* Hover effect for nav links */
+.nav-link:hover {
+  border-color: #007bff; /* Change border color on hover */
+  background-color: #007bff; /* Change background color on hover */
+  color: white; /* Change text color to white on hover */
+}
+
 
