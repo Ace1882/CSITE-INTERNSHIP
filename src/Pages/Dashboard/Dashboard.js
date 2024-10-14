@@ -22,42 +22,42 @@ const initialStudents = [
 
 
 const Dashboard = () => {
-  const [students, setStudents] = useState(initialStudents); // State to hold student data
-  const [selectedStudent, setSelectedStudent] = useState(null); // State to track selected student
+  const [students, setStudents] = useState(initialStudents);
+  const [selectedStudent, setSelectedStudent] = useState(null);
 
   const handleViewStudent = (student) => {
-    setSelectedStudent(student); // Set selected student when clicking "View" or "Edit"
+    setSelectedStudent(student);
   };
 
   const handleBackToDashboard = () => {
-    setSelectedStudent(null); // Reset to dashboard view
+    setSelectedStudent(null);
   };
 
   const handleUpdateStudent = (updatedStudent) => {
-    console.log('Updating student:', updatedStudent); // Check what is being updated
     setStudents((prevStudents) =>
       prevStudents.map((student) =>
-        student.id === updatedStudent.id ? updatedStudent : student // Use ID for matching
+        student.id === updatedStudent.id ? updatedStudent : student
       )
     );
-    setSelectedStudent(updatedStudent); // Update the selected student view
+    setSelectedStudent(updatedStudent);
   };
 
   return (
     <div className="dashboard-container">
+      <div className="overlay"></div> {/* Overlay background */}
       <Header /> {/* Render the Header */}
 
       {selectedStudent ? (
         <StudentProfile student={selectedStudent} onBack={handleBackToDashboard} onUpdateStudent={handleUpdateStudent} />
       ) : (
-        <>
-          <StudentListTable onViewStudent={handleViewStudent} students={students} /> {/* Pass the student data to the table */}
-        </>
+        <StudentListTable onViewStudent={handleViewStudent} students={students} />
       )}
+
       <Footer /> {/* Render the Footer */}
     </div>
   );
 };
+
 
 const StudentListTable = ({ onViewStudent, students }) => {
   const [filter, setFilter] = useState('all');
@@ -80,6 +80,7 @@ const StudentListTable = ({ onViewStudent, students }) => {
 
   return (
     <div className="student-list container my-5">
+      <div className='container-1'>
       <h2 className="my-4">INTERNSHIP DASHBOARD</h2>
       <h4>Students List</h4>
       <div className="d-flex justify-content-between mb-3">
@@ -136,6 +137,7 @@ const StudentListTable = ({ onViewStudent, students }) => {
           )}
         </tbody>
       </table>
+     </div>
     </div>
   );
 };

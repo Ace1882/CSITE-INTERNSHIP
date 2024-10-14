@@ -1,28 +1,27 @@
-.container {
-    max-width: 1200px;
-  }
-  
-  .card {
-    border: 1px solid #ccc;
-  }
-  
-  .progress-bar {
-    background-color: #4caf50;
-  }
-  
-  .submission-log-grading {
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .submission-logs, .grading {
-    border: 1px solid #ddd; /* Optional border */
-    padding: 15px; /* Optional padding */
-    border-radius: 5px; /* Optional border radius */
-    background-color: #f9f9f9; /* Optional background color */
-  }
+.profile-picture {
+  border: 3px solid #007bff; /* Blue border around the profile picture */
+}
 
-  .profile-header{
-    background-color: #ffffff7a;
-    border-radius: 30px;
-  }
+.submission-log-grading {
+  margin-top: 20px; /* Space above the logs and grading section */
+  display: flex; /* Flexbox for side-by-side layout */
+}
+
+.submission-logs {
+  background-color: rgba(5, 142, 255, 0.573);
+  border-radius: 8px; /* Rounded corners for the logs section */
+  padding: 15px; /* Padding inside the logs section */
+  flex: 1; /* Take equal space */
+  margin-right: 10px; /* Space between logs and grading sections */
+}
+
+.grading {
+  background-color: rgba(5, 142, 255, 0.573); 
+  border-radius: 8px; /* Rounded corners for the grading section */
+  padding: 15px; /* Padding inside the grading section */
+  flex: 1; /* Take equal space */
+}
+
+.progress-bar {
+  background-color: #28a745; /* Green color for progress bar */
+}
